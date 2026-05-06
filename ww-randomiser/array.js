@@ -1,0 +1,23 @@
+
+export const shuffle = input => {
+	const array = [...input]
+
+	for(let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1))
+		const temp = array[i]
+		array[i] = array[j]
+		array[j] = temp
+	}
+
+	return array
+}
+
+export const repeat = (value, times) => {
+	const a = []
+
+	for(let i = 0; i < times; ++i) {
+		a.push(value)
+	}
+
+	return a
+}
